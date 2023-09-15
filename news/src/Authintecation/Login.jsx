@@ -2,9 +2,10 @@ import React, { useContext } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../ContextApi/AuthContextProbider';
+import useTitle from '../hooks/Title';
 
 const Login = () => {
-
+useTitle('Login')
     const {login}=useContext(AuthContext)
 
     const navigate = useNavigate();

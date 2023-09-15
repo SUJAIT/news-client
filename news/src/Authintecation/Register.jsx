@@ -4,13 +4,14 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../ContextApi/AuthContextProbider';
+import useTitle from '../hooks/Title';
 
 
 
 
 const Register = () => {
     const {createUser} = useContext(AuthContext)
-
+useTitle('Register')
     //terms & Condition {cherck Box} working state start
     const [accepted,setAccepted] = useState(false);
     //terms working state End
