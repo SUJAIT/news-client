@@ -1,11 +1,13 @@
 import React, { useContext } from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
+import { CgProfile } from 'react-icons/Cg';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../ContextApi/AuthContextProbider';
 
 const NavBar = () => {
     const {user,logOut} = useContext(AuthContext)
- 
+    console.log(user)
+
     const handleLogOut = () =>{
         logOut()
         .then(() => {})
@@ -26,7 +28,8 @@ const NavBar = () => {
                               
                             </Nav>
                             <Nav>
-                                <Nav.Link href="#deets">Frofile</Nav.Link>
+                                {/* <img src={user._UserImpl.photoURL} alt="" /> */}
+                                {user ? <Nav.Link hef="#deets"><CgProfile id='profile-icon'/></Nav.Link>:<p></p>}
                           
                             { user ? <div><Button variant='secondary' onClick={handleLogOut} >LogOut</Button> </div> :<div><Link to="/login"> <Button variant='secondary' >Login</Button></Link> </div>     }
                               

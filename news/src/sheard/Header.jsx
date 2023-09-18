@@ -15,7 +15,7 @@ const Header = () => {
             </div>
             <div className='d-flex'>
                 <button type="button" class="btn btn-danger"><small>Latest News</small></button> <Marquee speed={100} >
-                    I can be a React component, multiple React components, or just some text.
+                   Sri Lanka were bowled out in 15.2 overs after they elected to bat first in Colombo, but Siraj wreaked havoc with figures of 6-21
                 </Marquee>
             </div>
 

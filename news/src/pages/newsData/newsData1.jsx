@@ -6,8 +6,8 @@ const NewsData1 = () => {
     const { id } = useParams()
     const categoryNews = useLoaderData()
     return (
-        <div>
-            <h1>This is a Category : {categoryNews.length}</h1>
+        <div className='mt-5'>
+       
         
         {
            categoryNews.map(news => <NewsCard

@@ -7,8 +7,10 @@ const NavigationLogin = () => {
     return (
         <div>
             <Container>
-                <NavBar></NavBar>
+              <NavBar></NavBar>
                 <Outlet></Outlet>
+            
+               
             </Container>
 
         </div>

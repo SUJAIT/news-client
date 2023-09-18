@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth';
+import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from 'firebase/auth';
 import React, { createContext, useEffect, useState } from 'react';
 import app from '../Authentication/Auth';
 
@@ -55,13 +55,23 @@ useEffect(()=>{
 });
 // user observer is End
 
+//google popup start
+const poup =(provider)=>{
+     setLoading(true)
+   return signInWithPopup(auth, provider)
+}
+//google popup end
+
+
+
 
 const authInfo = {
     user,
 createUser,
 login,
 loading,
-logOut
+logOut,
+poup
 
 }
     return (

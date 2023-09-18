@@ -24,8 +24,8 @@ useTitle('Register')
          const email =event.target.email.value;
          const password =event.target.password.value;
          const name = event.target.name.value;
-         const photo = event.target.photo.value;
-         console.log(name,email,password,photo)
+      
+         console.log(name,email,password)
      
         //  firbase working start
              createUser(email,password)
@@ -48,7 +48,7 @@ useTitle('Register')
     //fromSubmitHandler Working End
 //terms & condition CheckBox Handler working start
 const handeleCheckBox = event =>{
-  setAccepted(event.target.checked)
+  setAccepted(event.target.checked) // Chack box type ar jinis ka paita akta key word use korta hoy ta holo (checked)
 }
 //terms & condition CheckBox Handler working End
  
@@ -61,11 +61,6 @@ const handeleCheckBox = event =>{
         <Form.Label>Name</Form.Label>
         <Form.Control type="name" name='name' placeholder="Enter name" />
       </Form.Group>
-
- <Form.Group className="mb-3" controlId="formBasicPhoto">
- <Form.Label>Photo URL</Form.Label>
-        <Form.Control type="text" name='photo' placeholder="Enter photo" />
-</Form.Group>
 
 
  <Form.Group className="mb-3" controlId="formBasicEmail">
